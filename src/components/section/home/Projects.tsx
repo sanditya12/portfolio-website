@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ProjectCard from "../../card/ProjectCard";
 import DUMMY_PROJECTS from "../../../placeholders/project-data";
-import { Project } from "../../../interfaces/project";
+import { Project } from "../../../interfaces/project.interface";
 import { Link } from "react-router-dom";
 
 type Props = {

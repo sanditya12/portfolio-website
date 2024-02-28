@@ -1,9 +1,6 @@
-interface HeaderItem {
-  label: string;
-  url: string;
-}
+import { HeaderItem } from "../interfaces/header-item";
 
-const getHeaderItems = (): HeaderItem[] => [
+export const getHeaderItems = (): HeaderItem[] => [
   {
     label: "Projects",
     url: "/",
