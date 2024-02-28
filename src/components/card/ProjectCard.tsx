@@ -19,7 +19,7 @@ const ProjectCard: React.FC<Props> = ({
 }) => {
   return (
     <div
-      className={`relative group border-dark min-h-[26.2rem] p-4 overflow-hidden duration-75 hover:border-t-orange hover:border-t-4  ${className}`}
+      className={`relative group border-dark h-[26.2rem] p-4 overflow-hidden duration-75 hover:border-t-orange hover:border-t-4  ${className}`}
     >
       <img
         className={`bg-img opacity-0 group-hover:opacity-100 project-transition`}

@@ -1,20 +1,13 @@
 import React, { useState } from "react";
-import ProjectCard from "../card/ProjectCard";
-import DUMMY_PROJECTS from "../../placeholders/project-data";
+import ProjectCard from "../../card/ProjectCard";
+import DUMMY_PROJECTS from "../../../placeholders/project-data";
+import { Project } from "../../../interfaces/project";
+import { Link } from "react-router-dom";
 
 type Props = {
   className?: string;
   children?: React.ReactNode;
 };
-
-interface Project {
-  name: string;
-  img: string;
-  bgImg: string;
-  tags: string[];
-  techs?: string[];
-  desc?: string;
-}
 
 const Projects: React.FC<Props> = ({ className }) => {
   const [projects, setProjects] = useState<Project[]>(DUMMY_PROJECTS);
@@ -40,17 +33,19 @@ const Projects: React.FC<Props> = ({ className }) => {
             // const isNotFirstRow = realIndex > 3;
             const isLastRow = Math.ceil(realIndex / 3) === nRows;
             return (
-              <ProjectCard
-                heading={project.name}
-                img={project.img}
-                tags={project.tags}
-                bgImg={project.bgImg}
-                className={`b-project ${isThirdCol ? "border-r-0" : null} ${
-                  isLastRow ? "b-b-md" : null
-                }
+              <Link to={`projects/${project.slug}`}>
+                <ProjectCard
+                  heading={project.name}
+                  img={project.img}
+                  tags={project.tags}
+                  bgImg={project.bgImg}
+                  className={`b-project ${isThirdCol ? "border-r-0" : null} ${
+                    isLastRow ? "b-b-md" : null
+                  }
                   `}
-                key={realIndex}
-              />
+                  key={realIndex}
+                />
+              </Link>
             );
           })}
         {nPadders > 0 &&

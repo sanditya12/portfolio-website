@@ -1,4 +1,4 @@
-import CircleButton from "../button/CircleButton";
+import CircleButton from "../../button/CircleButton";
 
 const Hero = () => {
   return (
