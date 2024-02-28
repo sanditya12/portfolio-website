@@ -6,6 +6,6 @@ export const getInitialProjectDetails = (): ProjectDetails => ({
   description: "",
   mainImg: "",
   links: [],
-  content: [],
+  contents: [],
   techs: [],
 });

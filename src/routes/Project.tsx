@@ -4,6 +4,7 @@ import { getInitialProjectDetails } from "../constants/initial-project-details";
 import { getProjectDetailsById } from "../services/get-project-details-by-id";
 import { ProjectDetails } from "../interfaces/project-details.interface";
 import Headline from "../components/section/project/Headline";
+import Content from "../components/section/project/Content";
 
 function Project() {
   const { projectSlug } = useParams();
@@ -23,6 +24,13 @@ function Project() {
         links={projectDetails.links}
         mainImg={projectDetails.mainImg}
       />
+      {projectDetails.contents?.map((content) => (
+        <Content
+          heading={content.heading}
+          body={content.body}
+          img={content.img}
+        />
+      ))}
     </>
   );
 }

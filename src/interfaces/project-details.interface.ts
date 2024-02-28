@@ -4,7 +4,7 @@ export interface ProjectDetails {
   description?: string;
   links?: string[];
   mainImg: string;
-  content?: Content[];
+  contents?: Content[];
   techs?: Tech[];
 }
 
