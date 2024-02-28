@@ -3,7 +3,7 @@ import { ProjectDetails } from "../interfaces/project-details.interface";
 const getProjectDetails = (): ProjectDetails[] => [
   {
     slug: "notary-management-system",
-    title: "Notariat Management System Webapp",
+    title: "Notary Management System Webapp",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry, also known as ipsum lorem",
     mainImg: "/images/placeholders/page-image.png",

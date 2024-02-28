@@ -8,13 +8,13 @@ export interface ProjectDetails {
   techs?: Tech[];
 }
 
-interface Content {
+export interface Content {
   heading: string;
   body: string;
   img?: string;
 }
 
-interface Tech {
+export interface Tech {
   name: string;
   icon: string;
 }

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getInitialProjectDetails } from "../constants/initial-project-details";
 import { getProjectDetailsById } from "../services/get-project-details-by-id";
 import { ProjectDetails } from "../interfaces/project-details.interface";
+import Headline from "../components/section/project/Headline";
 
 function Project() {
   const { projectSlug } = useParams();
@@ -14,9 +15,15 @@ function Project() {
     setProjectDetails(fetchedProjectDetails);
   }, []);
   return (
-    <div>
-      <h1>{projectDetails.title}</h1>
-    </div>
+    <>
+      <Headline
+        title={projectDetails.title}
+        description={projectDetails.description}
+        techs={projectDetails.techs}
+        links={projectDetails.links}
+        mainImg={projectDetails.mainImg}
+      />
+    </>
   );
 }
 

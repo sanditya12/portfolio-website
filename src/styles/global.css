@@ -24,7 +24,10 @@
   }
 
   section {
-    @apply flex justify-center items-center px-5;
+    @apply flex flex-col justify-center items-center px-5;
+  }
+  section > *:first-child {
+    @apply max-w-5xl;
   }
 }
 

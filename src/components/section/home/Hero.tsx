@@ -2,7 +2,7 @@ import CircleButton from "../../button/CircleButton";
 
 const Hero = () => {
   return (
-    <section className={`pt-9 pb-14 space-x-8`}>
+    <section className={`pt-9 pb-14 space-x-8 flex-row`}>
       <div className={`space-y-2`}>
         <h1 className={`uppercase`}>Sanditya Sutanto</h1>
         <h3 className={`text-grey italic`}>

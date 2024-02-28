@@ -3,7 +3,7 @@ import { Project } from "../interfaces/project.interface";
 const DUMMY_PROJECTS: Project[] = [
   {
     slug: "notary-management-system",
-    name: "Notariat Management System Webapp",
+    name: "Notary Management System Webapp",
     img: "/images/placeholders/nms-mockup.png",
     bgImg: "/images/placeholders/bg-mockup.png",
     tags: ["Frontend", "Machine Learning", "Cloud"],
