@@ -56,6 +56,14 @@
     @apply border-t-2;
   }
 
+  .b-l-md {
+    @apply border-l-2;
+  }
+
+  .b-r-md {
+    @apply border-r-2;
+  }
+
   .b-no-t-md {
     @apply border-2 border-t-0;
   }
