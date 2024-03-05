@@ -11,42 +11,8 @@ type Props = {
 };
 
 const Projects: React.FC<Props> = ({ className }) => {
-  const comp = useRef(null);
+  // const comp = useRef(null);
   const [projects, setProjects] = useState<Project[]>(DUMMY_PROJECTS);
-
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      const t1 = gsap.timeline();
-      t1.from("#line1", {
-        scaleX: 0,
-        duration: 1.2,
-        transformOrigin: "50% 50%",
-        ease: "power4.inOut",
-      })
-        .from(
-          ["#line2", "#line3"],
-          {
-            scaleY: 0,
-            duration: 1.2,
-            transformOrigin: "50% 0%",
-            ease: "power4.inOut",
-            // delay: -0.8,
-          },
-          "<0.3"
-        )
-        .from(
-          "#grid",
-          {
-            opacity: 0,
-            duration: 0.5,
-            delay: 0,
-          },
-          "<0.8"
-        );
-    }, comp);
-
-    return () => ctx.revert();
-  });
 
   const nRows = Math.ceil((projects.length + 1) / 3);
   const nPadders = nRows * 3 - (projects.length + 1);
@@ -54,7 +20,7 @@ const Projects: React.FC<Props> = ({ className }) => {
   console.log("nRows: " + nRows);
 
   return (
-    <section className={`${className}`} ref={comp}>
+    <section className={`${className}`}>
       <div className={`relative`}>
         <div id="grid" className={`grid grid-cols-3`}>
           <div
@@ -91,15 +57,20 @@ const Projects: React.FC<Props> = ({ className }) => {
               <div className={`min-h-[26.2rem] b-t-md`} key={index} />
             ))}
         </div>
-        <div id="line1" className={`absolute top-0  w-full h-12 b-t-md `}></div>
+        <div id="line1" className={`absolute top-0  w-full h-0 b-t-md `} />
         <div
           id="line2"
           className={`absolute top-0 right-2/3 h-2/3 w-0 b-r-md`}
-        ></div>
+        />
         <div
           id="line3"
           className={`absolute top-0 right-1/3 h-2/3 w-0 b-r-md`}
-        ></div>
+        />
+        <div id="line4" className={`absolute top-1/3 w-2/3 h-0 b-t-md`} />
+        <div
+          id="line5"
+          className={`absolute top-1/3 right-0 w-2/3 h-0 b-t-md `}
+        />
       </div>
     </section>
   );
