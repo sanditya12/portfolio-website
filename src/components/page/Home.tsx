@@ -12,6 +12,7 @@ function Home() {
         opacity: 0,
         y: "+=30",
         stagger: 0.3,
+        delay: 0.2,
         // ease: "power4.inOut",
         ease: "expoScale(0.5,7,none)",
       })
@@ -34,7 +35,7 @@ function Home() {
             ease: "power4.inOut",
             // delay: -0.8,
           },
-          "<0.3"
+          "<0.4"
         )
         .from(
           ["#line4", "#line5"],
@@ -60,7 +61,7 @@ function Home() {
     }, comp);
 
     return () => ctx.revert();
-  });
+  }, []);
   return (
     <div ref={comp}>
       <Hero />

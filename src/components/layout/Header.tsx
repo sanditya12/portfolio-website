@@ -1,13 +1,31 @@
-import { useState } from "react";
+import gsap from "gsap";
+import { useLayoutEffect, useRef, useState } from "react";
 
 const Header = () => {
   const [isOpened, setIsOpened] = useState(false);
+  const navbar = useRef(null);
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const t1 = gsap.timeline();
+      t1.from("#header_list", {
+        opacity: 0,
+        // y: "+=20",
+        stagger: 0.3,
+        delay: 0.8,
+        ease: "expoScale(0.5,7,none)",
+      });
+    }, navbar);
+    return () => ctx.revert();
+  }, []);
 
   const handleClick = () => {
     setIsOpened((prev) => !prev);
   };
   return (
-    <nav className={`bg-light  w-full transition-all flex-col z-50`}>
+    <nav
+      className={`bg-light  w-full transition-all flex-col z-50`}
+      ref={navbar}
+    >
       <div
         className={`container flex items-center justify-center h-[8vh] w-full mx-auto`}
       >
@@ -15,7 +33,7 @@ const Header = () => {
           <button className={`md:hidden`} onClick={handleClick}>
             <img src={`/images/${isOpened ? "cross.svg" : "hamburger.svg"}`} />
           </button>
-          <div className={`hidden md:block`}>
+          <div id="header_list" className={`hidden md:block`}>
             <ul className={`flex space-x-6`}>
               <li className={`hover:underline decoration-2`}>
                 <a href={`/`}>
