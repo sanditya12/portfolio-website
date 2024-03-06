@@ -57,6 +57,14 @@ function Home() {
             ease: "expoScale(0.5,7,none)",
           },
           "<0.45"
+        )
+        .to(
+          ".line",
+          {
+            opacity: 0,
+            duration: 0,
+          },
+          "<0.6"
         );
     }, comp);
 
