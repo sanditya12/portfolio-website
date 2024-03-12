@@ -26,8 +26,10 @@ const ProjectCard: React.FC<Props> = ({
         src={bgImg}
       />
 
-      <div className="absolute inset-0 group-hover:opacity-90 bg-dark opacity-0 project-transition"></div>
-      <div className={`relative h-full`}>
+      <div
+        className={`absolute inset-0 group-hover:opacity-90 bg-gradient-to-b from-dark to-transparent opacity-0 project-transition z-10`}
+      ></div>
+      <div className={`relative h-full z-20`}>
         <div className={`space-y-2`}>
           <h2 className={`group-hover:text-light transition-colors duration-0`}>
             {heading}
@@ -44,7 +46,7 @@ const ProjectCard: React.FC<Props> = ({
           </div>
         </div>
         <img
-          className={`absolute -bottom-0 -right-0 w-5/6 grayscale group-hover:grayscale-0`}
+          className={`absolute -bottom-0 -right-0 w-5/6 h-1/2 object-contain grayscale group-hover:grayscale-0 duration-500 z-0`}
           src={img}
         />
       </div>
