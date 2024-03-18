@@ -40,10 +40,7 @@ const getProjectDetails = (): ProjectDetails[] => [
         // img: "/images/placeholders/page-image.png",
       },
     ],
-    techs: [
-      { name: "javascript", icon: "/images/tech-icons/javascript.png" },
-      { name: "mysql", icon: "/images/tech-icons/mysql.png" },
-    ],
+    techs: ["typescript", "react", "redux", "go", "postgresql", "gcp"],
   },
   {
     slug: "adventure-care",
@@ -78,16 +75,18 @@ const getProjectDetails = (): ProjectDetails[] => [
       },
       {
         heading: "Landing Page",
-        body: "To act as the main profile for the project, I developed a landing page that can be seen here (link to project).\nThe landing page is developed using typescript and tailwind css library.",
+        body: "To act as the main profile for the project, I developed a landing page as the profile of the organization.\nThe landing page is developed using typescript and tailwind css library.",
         img: "/images/content-img/landingpage_shot.jpg",
       },
     ],
     techs: [
-      { name: "javascript", icon: "/images/tech-icons/javascript.png" },
-      // { name: "java", icon: "/images/tech-icons/java.png" },
-      { name: "mysql", icon: "/images/tech-icons/mysql.png" },
-      { name: "nodejs", icon: "/images/tech-icons/nodejs.png" },
-      // { name: "php", icon: "/images/tech-icons/php.png" },
+      "nest",
+      "flutter",
+      "node",
+      "html",
+      "tailwind",
+      "postgresql",
+      "figma",
     ],
   },
   {
@@ -113,13 +112,7 @@ const getProjectDetails = (): ProjectDetails[] => [
       //   body: "The full script for my thesis can be found here: \n The presentation slides can be found here: \n",
       // },
     ],
-    techs: [
-      { name: "javascript", icon: "/images/tech-icons/javascript.png" },
-      { name: "java", icon: "/images/tech-icons/java.png" },
-      { name: "mysql", icon: "/images/tech-icons/mysql.png" },
-      { name: "nodejs", icon: "/images/tech-icons/nodejs.png" },
-      { name: "php", icon: "/images/tech-icons/php.png" },
-    ],
+    techs: ["python", "numpy"],
   },
   {
     slug: "smart-ambulance",
@@ -140,13 +133,7 @@ const getProjectDetails = (): ProjectDetails[] => [
         img: "/images/placeholders/ambulancedevice_nobg.png",
       },
     ],
-    techs: [
-      { name: "javascript", icon: "/images/tech-icons/javascript.png" },
-      { name: "java", icon: "/images/tech-icons/java.png" },
-      { name: "mysql", icon: "/images/tech-icons/mysql.png" },
-      { name: "nodejs", icon: "/images/tech-icons/nodejs.png" },
-      { name: "php", icon: "/images/tech-icons/php.png" },
-    ],
+    techs: ["react", "redux", "nest", "mongodb", "cpp"],
   },
   {
     slug: "sorting-algorithm-visualization-in-terminal",

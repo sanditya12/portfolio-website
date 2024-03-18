@@ -5,7 +5,7 @@ export interface ProjectDetails {
   links?: string[];
   mainImg: string;
   contents?: Content[];
-  techs?: Tech[];
+  techs?: string[];
 }
 
 export interface Content {

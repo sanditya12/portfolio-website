@@ -1,10 +1,10 @@
 import React from "react";
-import { Tech } from "../../../interfaces/project-details.interface";
+import { getTechIcon } from "../../../constants/tech-icons";
 
 type Props = {
   title: string;
   description?: string;
-  techs?: Tech[];
+  techs?: string[];
   links?: string[];
   mainImg: string;
   className?: string;
@@ -28,18 +28,20 @@ const Headline: React.FC<Props> = ({
           <div
             className={`col-span-1 px-5 space-y-4 border-l-2 animate-text-up`}
           >
-            <div className={`flex`}>
+            <div className={`flex space-x-2`}>
               {techs?.map((tech) => (
-                <img src={tech.icon} className={`w-6`} />
+                <img src={getTechIcon(tech)} className={`w-8`} />
               ))}
             </div>
-            <div className={``}>
+            <div className={`flex flex-col space-y-1 items-start`}>
               {links?.map((link) => (
                 <>
-                  <a href={`/${link}`} className={`underline`}>
+                  <a
+                    href={`/${link}`}
+                    className={`underline text-orange text-xs`}
+                  >
                     {link}
                   </a>
-                  <br />
                 </>
               ))}
             </div>
