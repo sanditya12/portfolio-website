@@ -40,18 +40,18 @@ const Header = () => {
                   <h4>Projects</h4>
                 </a>
               </li>
-              <li className={`hover:underline decoration-2`}>
+              {/* <li className={`hover:underline decoration-2`}>
                 <a href={`/`}>
                   <h4>About</h4>
                 </a>
-              </li>
-              <li className={`hover:underline decoration-2`}>
+              </li> */}
+              {/* <li className={`hover:underline decoration-2`}>
                 <a href={`/`}>
                   <h4>Resume</h4>
                 </a>
-              </li>
+              </li> */}
               <li className={`hover:underline decoration-2`}>
-                <a href={`/`}>
+                <a href={`https://www.linkedin.com/in/sanditya/`}>
                   <h4>Contact</h4>
                 </a>
               </li>
@@ -67,12 +67,16 @@ const Header = () => {
             <li
               className={`hover:underline decoration-2 border-b-[4px] border-solid border-b-ac-dark`}
             >
-              <h5>Dukung</h5>
+              <a href={`/`}>
+                <h4>Projects</h4>
+              </a>
             </li>
             <li
               className={`hover:underline decoration-2 border-b-[4px] border-solid border-b-ac-dark`}
             >
-              <h5>Tentang Kami</h5>
+              <a href={`https://www.linkedin.com/in/sanditya/`}>
+                <h4>Contact</h4>
+              </a>
             </li>
           </ul>
         </div>

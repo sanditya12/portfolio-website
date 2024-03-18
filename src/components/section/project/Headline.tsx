@@ -35,14 +35,17 @@ const Headline: React.FC<Props> = ({
             </div>
             <div className={``}>
               {links?.map((link) => (
-                <a href={`/${link}`} className={`underline`}>
-                  {link}
-                </a>
+                <>
+                  <a href={`/${link}`} className={`underline`}>
+                    {link}
+                  </a>
+                  <br />
+                </>
               ))}
             </div>
           </div>
         </div>
-        <img src={mainImg} className={`animate-text-up`} />
+        <img src={mainImg} className={`animate-text-up w-full`} />
       </div>
     </section>
   );

@@ -11,12 +11,14 @@ const Hero = () => {
         </h3>
       </div>
       <div className={`pt-4`}>
-        <CircleButton
-          className={`animate-text-up`}
-          text="Contact Me!"
-          diameter={90}
-          color="orange"
-        />
+        <a href="https://www.linkedin.com/in/sanditya/" target="_blank">
+          <CircleButton
+            className={`animate-text-up`}
+            text="Contact Me!"
+            diameter={90}
+            color="orange"
+          />
+        </a>
       </div>
     </section>
   );
