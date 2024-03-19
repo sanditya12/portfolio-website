@@ -27,7 +27,7 @@ const Header = () => {
       ref={navbar}
     >
       <div
-        className={`container flex items-center justify-center h-[8vh] w-full mx-auto`}
+        className={`container flex items-center justify-end md:justify-center h-[8vh] w-full mx-auto`}
       >
         <div>
           <button className={`md:hidden`} onClick={handleClick}>

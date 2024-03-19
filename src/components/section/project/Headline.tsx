@@ -32,19 +32,21 @@ const Headline: React.FC<Props> = ({
           <div
             className={`col-span-1 px-5 space-y-4 md:border-l-2 animate-text-up`}
           >
-            <div className={`flex space-x-2 space-y-1 flex-wrap`}>
+            <div
+              className={`flex md:space-x-2 space-y-1 flex-wrap justify-center md:justify-start`}
+            >
               {techs?.map((tech) => (
-                <img src={getTechIcon(tech)} className={`w-8`} />
+                <img src={getTechIcon(tech)} className={`w-4 md:w-8`} />
               ))}
             </div>
-            <div className={`flex flex-col space-y-1 items-start`}>
+            <div className={`flex flex-col space-y-1 items-start `}>
               {links?.map((link) => (
                 <>
                   <a
                     href={`/${link}`}
-                    className={`underline text-orange text-xs`}
+                    className={`underline text-orange text-xs `}
                   >
-                    {link}
+                    <h4 className={`text-center md:text-left`}>{link}</h4>
                   </a>
                 </>
               ))}
