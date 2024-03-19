@@ -23,12 +23,16 @@ const Headline: React.FC<Props> = ({
     <section className={`${className} `}>
       <div className={`pt-24 pb-14 space-y-16`}>
         <h1 className={`text-center animate-text-up`}>{title}</h1>
-        <div className={`grid grid-cols-3 px-12`}>
-          <h3 className={`col-span-2 px-5 animate-text-up`}>{description}</h3>
-          <div
-            className={`col-span-1 px-5 space-y-4 border-l-2 animate-text-up`}
+        <div className={`grid md:grid-cols-3 px-12 grid-cols-1 space-y-2`}>
+          <h3
+            className={`col-span-2 text-center md:text-left px-5 animate-text-up`}
           >
-            <div className={`flex space-x-2 flex-wrap`}>
+            {description}
+          </h3>
+          <div
+            className={`col-span-1 px-5 space-y-4 md:border-l-2 animate-text-up`}
+          >
+            <div className={`flex space-x-2 space-y-1 flex-wrap`}>
               {techs?.map((tech) => (
                 <img src={getTechIcon(tech)} className={`w-8`} />
               ))}
