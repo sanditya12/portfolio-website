@@ -21,13 +21,16 @@ const Projects: React.FC<Props> = ({ className }) => {
   return (
     <section className={`${className}`}>
       <div className={`relative`}>
-        <div id="grid" className={`grid grid-cols-3`}>
+        <div id="grid" className={`grid grid-cols-1 md:grid-cols-3`}>
           <div
-            className={`b-project border-dark min-h-[25rem] p-4 ${
+            className={`b-project border-dark md:min-h-[25rem] p-4 ${
               nRows > 1 ? "border-b-0" : null
             }`}
           >
-            <h2 className={`text-3xl font-normal`}>MY PROJECTS→</h2>
+            <h2 className={`text-3xl font-normal`}>
+              MY PROJECTS<span className={`hidden md:block`}>→</span>
+              <span className={`md:hidden`}>↓</span>
+            </h2>
           </div>
           {projects &&
             projects.map((project, index) => {
@@ -43,7 +46,7 @@ const Projects: React.FC<Props> = ({ className }) => {
                     tags={project.tags}
                     bgImg={project.bgImg}
                     className={`b-project ${isThirdCol ? "border-r-0" : null} ${
-                      isLastRow ? "b-b-md" : null
+                      isLastRow ? "md:b-b-md" : null
                     }
                   `}
                     key={realIndex}

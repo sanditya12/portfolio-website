@@ -10,7 +10,7 @@ const DUMMY_PROJECTS: Project[] = [
   },
   {
     slug: "safe-learing-in-autonomous-driving",
-    name: "Safe Learning for Autonomous Driving",
+    name: "Safe Learning for Autonomous Driving ",
     img: "/images/placeholders/jetbot.png",
     bgImg: "/images/placeholders/track_sample.jpg",
     tags: ["Python", "Machine Learning", "Robotics"],

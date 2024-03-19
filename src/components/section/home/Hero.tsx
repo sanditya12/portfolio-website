@@ -2,13 +2,13 @@ import CircleButton from "../../button/CircleButton";
 
 const Hero = () => {
   return (
-    <section className={`pt-9 pb-14 space-x-8 flex-row`}>
+    <section className={`pt-9 pb-14 md:space-x-8 flex-row px-5`}>
       <div className={`space-y-2`}>
         <h1 className={`uppercase animate-text-up`}>Sanditya Sutanto</h1>
-        <h3 className={`text-grey italic animate-text-up`}>
+        <h4 className={`text-grey italic animate-text-up`}>
           Software Engineer <br />
-          and More
-        </h3>
+          Web, IoT, and Robotics
+        </h4>
       </div>
       <div className={`pt-4`}>
         <a href="https://www.linkedin.com/in/sanditya/" target="_blank">

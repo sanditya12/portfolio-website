@@ -24,7 +24,7 @@
   }
 
   section {
-    @apply flex flex-col justify-center items-center px-5;
+    @apply flex flex-col justify-center items-center;
   }
   section > *:first-child {
     @apply max-w-5xl;
@@ -41,7 +41,7 @@
   }
 
   .b-project {
-    @apply border-[2px] border-l-0 border-b-0;
+    @apply border-[2px] border-l-0 border-b-0 md:border-r-[2px] border-r-0;
   }
 
   .b-y-md {
