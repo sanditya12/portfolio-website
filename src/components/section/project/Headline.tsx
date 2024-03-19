@@ -28,7 +28,7 @@ const Headline: React.FC<Props> = ({
           <div
             className={`col-span-1 px-5 space-y-4 border-l-2 animate-text-up`}
           >
-            <div className={`flex space-x-2`}>
+            <div className={`flex space-x-2 flex-wrap`}>
               {techs?.map((tech) => (
                 <img src={getTechIcon(tech)} className={`w-8`} />
               ))}
